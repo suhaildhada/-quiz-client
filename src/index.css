@@ -1,13 +1,110 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background: #040127;
+  font-family: sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  height: 400px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+.question-area {
+  /* background: red; */
+  width: 50%;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  border: 5px solid #ffd700;
+  line-height: initial;
+  margin-top: -3.5rem;
+  background: #040127;
+}
+
+.answer-grid-container {
+  display: grid;
+  height: 400px;
+  grid-template-columns: auto auto;
+  grid-template-rows: 7rem 7rem;
+  gap: 3rem;
+  margin-top: 4rem;
+  justify-content: space-evenly;
+  align-content: center;
+  align-items: center;
+}
+
+.answer {
+  padding: 1rem 7rem;
+  border-radius: 2rem;
+  border: 3px solid white;
+  text-transform: capitalize;
+  transition: all;
+  cursor: pointer;
+  color: white;
+}
+
+.answer:not(.wrongAns):hover {
+  background-color: rgb(19, 163, 19);
+}
+
+.correctAns {
+  background-color: rgb(19, 163, 19);
+}
+
+.wrongAns {
+  background-color: red;
+}
+
+.result {
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.timer {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 100%;
+  overflow: hidden;
+  padding-top: 1rem;
+  text-align: center;
+  color: black;
+  background-color: #ffd700;
+}
+
+.game-over-msg-container {
+  text-align: center;
+  margin-top: 25rem;
+}
+
+.time-ran-out-msg {
+  color: white;
+  font-weight: bold;
+}
+
+.game-over-btn-container {
+  text-align: center;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 0.9rem 3rem;
+  background-color: #1c1566;
+  font-size: 1.5rem;
+  border: 5px solid #ffd700;
+  border-radius: 2rem;
+  color: white;
+  text-transform: capitalize;
+  cursor: pointer;
 }
